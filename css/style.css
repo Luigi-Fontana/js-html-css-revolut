@@ -30,6 +30,7 @@ header {
 .header-left img {
     height: 60px;
     vertical-align: middle;
+    margin-left: 10px;
 }
 
 .header-right {
@@ -38,26 +39,50 @@ header {
 }
 
 .menu {
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 .menu-item {
-    margin: 0 20px;
+    margin: 0 5px;
+    padding: 8px 15px;
     position: relative;
-}
-
-.menu-item > a {
-    line-height: 80px;
-    padding: 10px 0;
-    border-bottom: 2px solid #61ce4e;
+    border-bottom: 2px solid transparent;
     border-radius: 1px;
 }
 
+.menu-item.selected {
+    border-bottom: 2px solid #61ce4e;
+}
+
+.menu-item > a {
+    padding: 20px 0;
+}
+
 .dropdown-menu {
+    width: 200px;
     position: absolute;
-    top: 80px;
+    top: 50px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    display: none;
+}
+
+.dropdown-menu-item {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+}
+
+#drop1 {
+    left: -60px;
+}
+
+#drop2 {
+    left: -25px;
 }
 
 button,
@@ -68,9 +93,12 @@ button,
 }
 
 button {
+    margin: 0 10px 2px 30px;
     color: white;
+    letter-spacing: 1px;
     padding: 10px 30px;
     border-radius: 5px;
     border: none;
     background-color: #61ce4e;
+    cursor: pointer;
 }
